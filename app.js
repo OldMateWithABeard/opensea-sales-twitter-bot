@@ -14,7 +14,7 @@ function formatAndSendTweet(event) {
     const totalPrice = _.get(event, 'total_price');
 
     const tokenDecimals = _.get(event, ['payment_token', 'decimals']);
-    const tokenUsdPrice = _.get(event, ['payment_token', 'aud_price']);
+    const tokenUsdPrice = _.get(event, ['payment_token', 'usd_price']);
     const tokenEthPrice = _.get(event, ['payment_token', 'eth_price']);
 
     const formattedUnits = ethers.utils.formatUnits(totalPrice, tokenDecimals);
